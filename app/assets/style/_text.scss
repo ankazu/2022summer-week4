@@ -1,0 +1,25 @@
+.text_2xl {
+	font-size: $text_default_size*4;
+	@include sm {
+		font-size: 1.5rem;
+	}
+}
+
+.text_xl {
+	font-size: $text_default_size*3;
+	@include sm {
+		font-size: 1.5rem;
+	}
+}
+
+.text_lg {
+	font-size: $text_default_size*2.25;
+}
+
+.text_md {
+	font-size: $text_default_size*1.5;
+}
+
+.text_sm {
+	font-size: $text_default_size*1.25;
+}

@@ -1,5 +1,5 @@
 footer {
-	background-color: $promary_color;
+	background-color: $primary_color;
 	padding: 2.25rem 0 2rem;
 	color: #fff;
 	@include sm {
@@ -123,10 +123,10 @@ footer .material-icons-outlined {
 	}
 
 	div {
-		font-family: 'Roboto';
+		font-family: $text_en;
 		width: 100%;
 		a {
-			font-family: 'Noto Sans TC';
+			font-family: $text_zhtw;
 			font-size: 14px;
 			display: inline-block;
 			margin-left: 3rem;

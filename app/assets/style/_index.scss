@@ -1,0 +1,325 @@
+.banner {
+	background-image: url('../images/home-header.png');
+	height: 787px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	@include md {
+		background-image: url('../images/home-header-sm.png');
+	}
+	@include sm {
+		height: 396px;
+	}
+	.container {
+		display: flex;
+		align-items: center;
+		height: 100%;
+	}
+}
+
+.banner_txt {
+	text-align: right;
+	color: $secondary_color;
+	width: 100%;
+	a {
+		font-weight: 300;
+	}
+	h1 {
+		margin: 0 0 4px;
+	}
+	span {
+		@include sm {
+			font-size: 1rem;
+		}
+	}
+}
+
+.section_idx {
+	padding: 80px 0;
+	@include sm {
+		padding: 40px 0;
+	}
+	h2 {
+		margin-bottom: 3rem;
+		text-align: center;
+		color: $secondary_color;
+		
+		@include sm {
+			margin-bottom: 24px;
+		}
+	}
+}
+
+.section_service {
+	background-color: $light_color;
+
+	h2 {
+		@include md {
+			margin-bottom: 0px;
+		}
+	}
+}
+
+.service {
+	display: flex;
+	flex-wrap: wrap;
+
+	&_list {
+		width: 25%;
+		padding: 0 12px;
+		list-style: none;
+
+		&:first-child {
+			padding-right: 0;
+		}
+		&:last-child {
+			padding-left: 0;
+		}
+		// 此處左右留白與 margin 處理方式感覺亂
+		@include md {
+			width: 50%;
+			margin-top: 36px;
+			&:nth-of-type(odd) {
+				padding-right: 12px;
+				padding-left: 0;
+			}
+			&:nth-of-type(even) {
+				padding-left: 12px;
+				padding-right: 0;
+			}
+		}
+
+		@include sm {
+			width: 100%;
+			&:nth-of-type(odd) {
+				padding: 0;
+			}
+			&:nth-of-type(even) {
+				padding: 0;
+			}
+		}
+		
+		&_img {
+			width: 86px;
+			margin: 0 auto 20px;
+		}
+
+		h3 {
+			color: $secondary_color;
+			text-align: center;
+			margin-bottom: 8px;
+		}
+	}
+}
+
+.classic {
+	display: flex;
+	justify-content: space-between;
+
+	@include md {
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	&_list {
+		max-width: 416px;
+		list-style: none;
+		width: 33.3%;
+		position: relative;
+
+		@include md {
+			max-width: 336px;
+			width: 100%;
+			margin: 0 auto;
+
+			&:not(:last-child) {
+				margin-bottom: 1.5rem;
+			}
+		}
+
+		h3 {
+			font-family: $text_en;
+			font-style: italic;
+			margin-top: 0.5rem;
+			color: $primary_color;
+			text-align: center;
+		}
+	}
+}
+
+.section_joint {
+	background-image: url('../images/index-bg.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	text-align: center;
+	@include md {
+		background-image: url('../images/index-bg-md.png');
+	}
+	@include sm {
+		background-image: url('../images/index-bg-sm.png');
+	}
+
+	h2 {
+		color: #fff;
+	}
+}
+
+.joint {
+	display: flex;
+	flex-wrap: wrap;
+
+	&_item {
+		list-style: none;
+		width: 50%;
+		background-color: #fff;
+		text-align: center;
+		position: relative;
+		
+		&_mbImg {
+			display: none;
+		}
+
+		@include md {
+			width: 100%;
+			&:not(:last-child) {
+				margin-bottom: 1.5rem;
+			}
+		}
+
+		@include sm {
+			&_mbImg {
+				display: block;
+			}
+			&_pcImg {
+				display: none;
+			}
+		}
+
+		h3 {
+			font-family: $text_en;
+			color: $primary_color;
+			font-style: italic;
+		}
+	}
+}
+
+// 平版為了處理下方 card 的間距想知道有沒有更好的解法
+.section_recommend {
+	h2 {
+		@include md {
+			margin-bottom: 24px;
+		}
+		@include sm {
+			margin-bottom: 8px;
+		}
+	}
+}
+
+.recommend {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	&_card {
+		max-width: 306px;
+		width: 25%;
+		list-style: none;
+		box-shadow: 0px 2px 6px #00000029;
+		border-radius: 4px;
+		overflow: hidden;
+		position: relative;
+
+		@include md {
+			width: 50%;
+			max-width: 336px;
+			margin-top: 24px;
+		}
+		@include sm {
+			width: 100%;
+			max-width: 336px;
+			margin-top: 16px;
+		}
+
+		&_txt {
+			padding: 1rem;
+		}
+		&_name {
+			margin-bottom: 8px;
+		}
+		&_text {
+			min-height: 120px;
+		}
+		&_date {
+			font-size: 14px;
+			color: #707070;
+		}
+	}
+}
+
+.scrtion_contact {
+	background-color: $light_color;
+	.container {
+		max-width: 676px;
+	}
+	p {
+		font-size: 20px;
+		margin-bottom: 24px;
+	}
+}
+
+.contact_form {
+
+	&_iptbox {
+		margin-bottom: 16px;
+
+		label {
+			width: 100%;
+			margin-bottom: 8px;
+			display: inline-block;
+		}
+
+		input {
+			width: 100%;
+			padding: 6px 12px;
+			background-color: transparent;
+			border: 1px solid #000;
+		}
+
+		textarea {
+			width: 100%;
+			padding: 6px 12px;
+			background-color: transparent;
+			border: 1px solid #000;
+			min-height: 136px;
+		}
+	}
+
+	&_checkbox {
+		display: flex;
+		align-items: center;
+		margin-bottom: 48px;
+		@include sm {
+			align-items: flex-start;
+		}
+		input {
+			width: 16px;
+			height: 16px;
+			margin-right: 4px;
+			// 沒有作用
+			border: 3px solid #000;
+
+			@include sm {
+				margin-top: 4px;
+			}
+		}
+		label {
+			width: calc(100% - 20px);
+		}
+	}
+	
+	&_btnbox {
+		max-width: 416px;
+		margin: 0 auto;
+	}
+}
