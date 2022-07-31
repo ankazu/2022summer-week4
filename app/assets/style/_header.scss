@@ -1,0 +1,33 @@
+.header {
+	background-color: $promary_color;
+	nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+.logoBox {
+	max-width: 80px;
+}
+
+.menu_lists {
+	display: flex;
+	li {
+		list-style: none;
+		margin: 25px 2rem;
+		a {
+			color: #fff;
+			font-size: 1.25rem;
+			&:hover {
+				opacity: .8;
+			}
+		}
+		&:first-child {
+			margin-left: 0;
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
