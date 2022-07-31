@@ -4,27 +4,49 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		flex-wrap: wrap;
+		@include sm {
+			justify-content: center;
+		}
+	}
+	.container {
+		@include sm {
+			padding: 0;
+		}
 	}
 }
 
 .logoBox {
 	max-width: 80px;
+	margin: 16px 0;
 }
 
 .menu_lists {
 	display: flex;
+	@include sm {
+		flex-wrap: wrap;
+		width: 100%;
+	}
 	li {
 		list-style: none;
-		margin: 25px 2rem;
+		margin: 2rem;
+		@include sm {
+			text-align: center;
+			margin: 0;
+			width: 50%;
+			border: 1px solid #fff;
+		}
 		a {
 			color: #fff;
 			font-size: 1.25rem;
+			@include sm {
+				padding: 12px 0;
+				display: block;
+			}
+
 			&:hover {
 				opacity: .8;
 			}
-		}
-		&:first-child {
-			margin-left: 0;
 		}
 		&:last-child {
 			margin-right: 0;

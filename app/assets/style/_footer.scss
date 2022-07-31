@@ -1,29 +1,55 @@
 footer {
 	background-color: $promary_color;
-	padding: 3rem 0 2rem;
+	padding: 2.25rem 0 2rem;
 	color: #fff;
+	@include sm {
+		padding: 1.5rem 0;
+	}
+
 	li {
 		list-style: none;
 	}
 	a {
 		color: #fff;
 		&:hover {
-					opacity: .8;
+			opacity: .8;
 		}
 	}
+	.container {
+		@include sm {
+			padding: 0 16px;
+		}
+	} 
 }
 footer .material-icons-outlined {
 	font-size: 2.25rem;
 	margin-right: 22px;
+
+	@include sm {
+		margin-right: 11px;
+	}
 }
 .footer_linksbox {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	flex-wrap: wrap;
+	border-bottom: 1px solid #fff;
+	padding-bottom: 24px;
+
+	@include sm {
+		align-items: flex-start;
+		padding-bottom: 1rem;
+	}
 }
 
 .footer_links {
 	display: flex;
+
+	@include sm {
+		display: none;
+	}
+
 	li {
 		margin-right: 3rem;
 		
@@ -35,23 +61,52 @@ footer .material-icons-outlined {
 
 .footer_social {
 	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+	margin: 12px 0;
+
+	@include sm {
+		order: 2;
+		margin: 0;
+	}
+
 	div {
 		width: 3rem;
 		margin-left: 2rem;
+
+		@include md {
+			width: 2.5rem;
+		}
+
+		@include sm{
+			width: 1.5rem;
+			margin-left: 8px;
+		}
+
+		&:first-child {
+			margin-left: 0;
+		}
 	}
 }
 
 .footer_info {
-	margin: 24px 0 0;
-	padding-bottom: 24px;
-	border-bottom: 1px solid #fff;
+	margin: 12px 0 0;
+	font-size: 2.25rem;
+	width: 100%;
+
+	@include sm {
+		order: 1;
+		font-size: 1rem;
+		margin: 0;
+		width: unset;
+	}
+
 	li {
 		margin-bottom: 8px;
 		display: flex;
 		align-items: center;
 	}
 	a {
-		font-size: 2.25rem;
 		font-weight: 300;
 	}
 }
@@ -60,14 +115,27 @@ footer .material-icons-outlined {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 32px 0 0;
+	flex-wrap: wrap;
+	margin: 32px 0 0;
+
+	@include sm {
+		margin-top: 24px;
+	}
+
 	div {
 		font-family: 'Roboto';
+		width: 100%;
 		a {
 			font-family: 'Noto Sans TC';
 			font-size: 14px;
 			display: inline-block;
 			margin-left: 3rem;
+
+			@include sm {
+				width: 100%;
+				margin: 8px 0 0;
+			}
+
 			&:first-child {
 				margin-left: 0;
 			}
