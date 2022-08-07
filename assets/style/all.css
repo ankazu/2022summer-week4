@@ -996,10 +996,16 @@ footer .material-icons-outlined {
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-size: 42px; }
+    @media only screen and (max-width: 576px) {
+      .porduct_titlebox div {
+        font-size: 1.5rem; } }
   .porduct_titlebox h1 {
     margin: 0;
     font-size: 2rem;
     font-weight: 500; }
+    @media only screen and (max-width: 576px) {
+      .porduct_titlebox h1 {
+        font-size: 1.5rem; } }
 
 .product_lists {
   display: -webkit-box;
