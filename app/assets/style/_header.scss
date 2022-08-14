@@ -5,12 +5,12 @@
 		justify-content: space-between;
 		align-items: center;
 		flex-wrap: wrap;
-		@include sm {
+		@include md {
 			justify-content: center;
 		}
 	}
 	.container {
-		@include sm {
+		@include md {
 			padding: 0;
 		}
 	}
@@ -23,14 +23,14 @@
 
 .menu_lists {
 	display: flex;
-	@include sm {
+	@include md {
 		flex-wrap: wrap;
 		width: 100%;
 	}
 	li {
 		list-style: none;
 		margin: 2rem;
-		@include sm {
+		@include md {
 			text-align: center;
 			margin: 0;
 			width: 50%;
@@ -39,7 +39,7 @@
 		a {
 			color: #fff;
 			font-size: 1.25rem;
-			@include sm {
+			@include md {
 				padding: 12px 0;
 				display: block;
 			}

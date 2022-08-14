@@ -4,7 +4,7 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-	@include md {
+	@include lg {
 		background-image: url('../images/home-header-sm.png');
 	}
 	@include sm {
@@ -54,7 +54,7 @@
 	background-color: $light_color;
 
 	h2 {
-		@include md {
+		@include lg {
 			margin-bottom: 0px;
 		}
 	}
@@ -76,7 +76,7 @@
 			padding-left: 0;
 		}
 		// 此處左右留白與 margin 處理方式感覺亂
-		@include md {
+		@include lg {
 			width: 50%;
 			margin-top: 36px;
 			&:nth-of-type(odd) {
@@ -116,7 +116,7 @@
 	display: flex;
 	justify-content: space-between;
 
-	@include md {
+	@include lg {
 		flex-direction: column;
 		justify-content: center;
 	}
@@ -127,7 +127,7 @@
 		width: 33.3%;
 		position: relative;
 
-		@include md {
+		@include lg {
 			max-width: 336px;
 			width: 100%;
 			margin: 0 auto;
@@ -138,7 +138,6 @@
 		}
 
 		h3 {
-			font-family: $text_en;
 			font-style: italic;
 			margin-top: 0.5rem;
 			color: $primary_color;
@@ -153,7 +152,7 @@
 	background-size: cover;
 	background-position: center;
 	text-align: center;
-	@include md {
+	@include lg {
 		background-image: url('../images/index-bg-md.png');
 	}
 	@include sm {
@@ -180,7 +179,7 @@
 			display: none;
 		}
 
-		@include md {
+		@include lg {
 			width: 100%;
 			&:not(:last-child) {
 				margin-bottom: 1.5rem;
@@ -197,7 +196,6 @@
 		}
 
 		h3 {
-			font-family: $text_en;
 			color: $primary_color;
 			font-style: italic;
 		}
@@ -207,7 +205,7 @@
 // 平版為了處理下方 card 的間距想知道有沒有更好的解法
 .section_recommend {
 	h2 {
-		@include md {
+		@include lg {
 			margin-bottom: 24px;
 		}
 		@include sm {
@@ -218,24 +216,30 @@
 
 .recommend {
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
+	margin: 0 -12px;
+
+	@include lg {
+			justify-content: center;
+			flex-wrap: wrap;
+
+		}
 
 	&_card {
+		width: calc((100% - 72px)/4);
 		max-width: 306px;
-		width: 25%;
 		list-style: none;
 		box-shadow: 0px 2px 6px #00000029;
 		border-radius: 4px;
 		overflow: hidden;
 		position: relative;
+		margin: 0 12px;
 
-		@include md {
+		@include lg {
 			width: 50%;
 			max-width: 336px;
 			margin-top: 24px;
 		}
-		@include sm {
+		@include md {
 			width: 100%;
 			max-width: 336px;
 			margin-top: 16px;

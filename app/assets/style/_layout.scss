@@ -1,8 +1,8 @@
 .container {
-	max-width: 1336px;
-	padding: 0 20px;
+	max-width: 1320px;
+	padding: 0 12px;
 	margin: 0 auto;
-	@include md {
+	@include lg {
 		padding: 0 36px;
 	}
 	@include sm {

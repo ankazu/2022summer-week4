@@ -74,7 +74,7 @@ footer .material-icons-outlined {
 		width: 3rem;
 		margin-left: 2rem;
 
-		@include md {
+		@include lg {
 			width: 2.5rem;
 		}
 
@@ -123,22 +123,19 @@ footer .material-icons-outlined {
 	}
 
 	div {
-		font-family: $text_en;
-		width: 100%;
+		@include sm {
+				width: 100%;
+			}
 		a {
-			font-family: $text_zhtw;
 			font-size: 14px;
 			display: inline-block;
 			margin-left: 3rem;
 
-			@include sm {
+						@include sm {
 				width: 100%;
 				margin: 8px 0 0;
 			}
 
-			&:first-child {
-				margin-left: 0;
-			}
 		}
 	}
 }
