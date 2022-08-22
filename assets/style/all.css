@@ -362,12 +362,6 @@ body {
   max-width: 1320px;
   padding: 0 12px;
   margin: 0 auto; }
-  @media only screen and (max-width: 992px) {
-    .container {
-      padding: 0 36px; } }
-  @media only screen and (max-width: 576px) {
-    .container {
-      padding: 0 20px; } }
 
 .text_2xl {
   font-size: 4rem; }
@@ -942,7 +936,7 @@ footer .material-icons-outlined {
     display: block;
     position: relative;
     font-weight: 500; }
-    @media only screen and (max-width: 576px) {
+    @media only screen and (max-width: 768px) {
       .product_navbar a {
         font-size: 1rem; } }
     .product_navbar a::before {
